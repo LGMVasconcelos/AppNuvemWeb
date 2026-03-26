@@ -27,7 +27,7 @@ include_once 'conexao.php';
             </div>
             <div class="mb-3">
                 <label for="celular" class="form-label">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
+                <input type="text" class="form-control" id="celular" name="celular" maxlength="11" required>
             </div>
             <div class="mb-3">
                 <label for="datanasc" class="form-label">Data de Nascimento:</label>
@@ -100,7 +100,7 @@ include_once 'conexao.php';
                 echo '</div>';
                 echo '<div class="mb-3">';
                 echo '<label for="celular" class="form-label">Celular:</label>';
-                echo '<input type="text" class="form-control" id="celular" name="celular" required value=' . $row['celular'] . '>';
+                echo '<input type="text" class="form-control" id="celular" name="celular" maxlength="11" required value=' . $row['celular'] . '>';
                 echo '</div>';
                 echo '<div class="mb-3">';
                 echo '<label for="datanasc" class="form-label">Data de Nascimento:</label>';
