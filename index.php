@@ -78,7 +78,8 @@ include_once 'conexao.php';
                 echo '<td>' . htmlspecialchars($generoformatado) . '</td>';
 
                 echo '<td>';
-                echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal' . $row['id'] . '">Editar</button>';
+                echo '<button type="button" class="btn btn-primary" style="margin-bottom: 5px;" data-bs-toggle="modal" data-bs-target="#editarModal' . $row['id'] . '">Editar</button>';
+                echo '<br>';
                 echo '<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal' . $row['id'] . '">Excluir</button>';
 
                 echo '</td>';
