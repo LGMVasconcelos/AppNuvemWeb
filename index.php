@@ -69,13 +69,12 @@ include_once 'conexao.php';
                 }
                 if (strlen($row['celular']) == 11 && $row['celular'][2] == '9') {
                     $celularformatado = "(" . substr($row['celular'], 0, 2) . ") " . substr($row['celular'], 2, 5) . "-" . substr($row['celular'], 7, 4);
-                } else {
-                    $celularformatado = $row['celular'];
                 }
+                $dataformatada = date("d/m/Y", strtotime($row['datanasc']));
                 echo '<tr>';
                 echo '<td>' . htmlspecialchars($row['nome']) . '</td>';
                 echo '<td>' . htmlspecialchars($celularformatado) . '</td>';
-                echo '<td>' . htmlspecialchars($row['datanasc']) . '</td>';
+                echo '<td>' . htmlspecialchars($dataformatada) . '</td>';
                 echo '<td>' . htmlspecialchars($generoformatado) . '</td>';
 
                 echo '<td>';

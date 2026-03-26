@@ -8,7 +8,7 @@ $genero = $_POST['genero'] ?? '';
 
 $stmt = $pdo->prepare("SELECT id FROM clientes WHERE id = ?");
 $stmt->execute([$id]);
-if (strlen($celular) != 11) {
+if (strlen($celular) != 11 || $celular[2] != '9') {
     echo "Celular inválido.";
     exit;
 }
