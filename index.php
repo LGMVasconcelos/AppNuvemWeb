@@ -28,6 +28,7 @@ include_once 'conexao.php';
             <div class="mb-3">
                 <label for="celular" class="form-label">Celular:</label>
                 <input type="text" class="form-control" id="celular" name="celular" maxlength="11" required>
+                <label class="form-label">O número deve conter 11 dígitos e o terceiro dígito deve ser 9.</label>
             </div>
             <div class="mb-3">
                 <label for="datanasc" class="form-label">Data de Nascimento:</label>
@@ -101,6 +102,7 @@ include_once 'conexao.php';
                 echo '<div class="mb-3">';
                 echo '<label for="celular" class="form-label">Celular:</label>';
                 echo '<input type="text" class="form-control" id="celular" name="celular" maxlength="11" required value=' . $row['celular'] . '>';
+                echo '<label class="form-label">O número deve conter 11 dígitos e o terceiro dígito deve ser 9.</label>';
                 echo '</div>';
                 echo '<div class="mb-3">';
                 echo '<label for="datanasc" class="form-label">Data de Nascimento:</label>';
