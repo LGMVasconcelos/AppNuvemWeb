@@ -6,7 +6,7 @@ $datanasc = $_POST['datanasc'] ?? '';
 $genero = $_POST['genero'] ?? '';
 $stmt = $pdo->prepare("SELECT nome, celular, datanasc, genero FROM clientes WHERE nome = ? AND celular = ? AND datanasc = ? AND genero = ?");
 $stmt->execute([$nome, $celular, $datanasc, $genero]);
-if (strlen($celular) > 11) {
+if (strlen($celular) != 11) {
     echo "Celular inválido.";
     exit;
 }
