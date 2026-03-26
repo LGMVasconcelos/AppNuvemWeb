@@ -8,6 +8,14 @@ $genero = $_POST['genero'] ?? '';
 
 $stmt = $pdo->prepare("SELECT id FROM clientes WHERE id = ?");
 $stmt->execute([$id]);
+if (strlen($celular) > 11) {
+    echo "Celular inválido.";
+    exit;
+}
+if (strtotime($datanasc) > strtotime(date('Y-m-d'))) {
+    echo "Data de nascimento inválida.";
+    exit;
+}
 if ($stmt->rowCount() === 0) {
     echo "Cliente não encontrado.";
     exit;
@@ -19,7 +27,6 @@ if ($stmt->rowCount() === 0) {
         exit();
     } else {
         echo "Erro ao atualizar cliente.";
-        header("Location: index.php");
         exit();
     }
 }
